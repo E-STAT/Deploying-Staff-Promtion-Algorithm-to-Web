@@ -1,3 +1,5 @@
+What will be the input on the web:
+
 The form that the users will fill are:
 Division: Categorical as below
 Commercial Sales and Marketing                 
