@@ -1,0 +1,52 @@
+# Deploying-Staff-Promtion-Algorithm-to-Web
+After the Data Science Nigeria Kaggle qualification challenge, I decided to deploy my model to a web application
+
+What will be the input on the web:
+
+The form that the users will fill are:
+Division: Categorical as below
+Commercial Sales and Marketing                 
+Customer Support and Field Operations          
+Information Technology and Solution Support    
+Sourcing and Purchasing                        
+Information and Strategy                       
+Business Finance Operations                     
+People/HR Management                            
+Regulatory and Legal services                   
+Research and Innovation                         
+
+Qualification:
+First Degree or HND         
+MSc, MBA and PhD             
+Non-University Education 
+    
+Gender:
+Male      
+Female     
+
+Channel_of_Recruitment:
+Agency and others                  
+Direct Internal process            
+Referral and Special candidates  
+   
+Trainings_Attended: Inputs will be numeric
+
+Last_performance_score: Inputs will be numeric
+
+Targets_met: 1 for Yes and 0 for No
+
+Previous_Award: 1 for Yes and 0 for No
+
+Training_score_average: numeric (1-100)
+
+Foreign_schooled: 1 for Yes and 0 for No
+
+Marital_Status: 1 for Yes and 0 for No
+
+Past_Disciplinary_Action: 1 for Yes and 0 for No
+
+Previous_IntraDepartmental_Movement: 1 for Yes and 0 for No
+
+No_of_previous_employers: 1 for Yes and 0 for No
+
+Age_employed: numeric
