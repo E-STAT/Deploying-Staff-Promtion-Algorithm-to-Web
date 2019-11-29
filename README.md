@@ -1,52 +1,79 @@
 # Deploying-Staff-Promtion-Algorithm-to-Web
 After the Data Science Nigeria Kaggle qualification challenge, I decided to deploy my model to a web application
 
-What will be the input on the web:
 
-The form that the users will fill are:
-Division: Categorical as below
-Commercial Sales and Marketing                 
-Customer Support and Field Operations          
-Information Technology and Solution Support    
-Sourcing and Purchasing                        
-Information and Strategy                       
-Business Finance Operations                     
-People/HR Management                            
-Regulatory and Legal services                   
-Research and Innovation                         
 
-Qualification:
-First Degree or HND         
-MSc, MBA and PhD             
-Non-University Education 
-    
-Gender:
-Male      
-Female     
+## Technologies Used
 
-Channel_of_Recruitment:
-Agency and others                  
-Direct Internal process            
-Referral and Special candidates  
-   
-Trainings_Attended: Inputs will be numeric
+- [Python](https://www.python.org/)
+- [Flask](http://flask.palletsprojects.com/en/1.1.x/)
+- [PostgreSQL](https://www.postgresql.org/download/)
 
-Last_performance_score: Inputs will be numeric
 
-Targets_met: 1 for Yes and 0 for No
+## Getting Started
 
-Previous_Award: 1 for Yes and 0 for No
+```bash
+	- pipenv install 
+	- set FLASK_ENV=development  (use export instead of set if mac os)
+	- flask run
+```
 
-Training_score_average: numeric (1-100)
+## Prerequisites
 
-Foreign_schooled: 1 for Yes and 0 for No
+Ensure you have the following installed on your local machine:
 
-Marital_Status: 1 for Yes and 0 for No
+- [Flask](http://flask.palletsprojects.com/en/1.1.x/)
+- [PostgreSQL](https://www.postgresql.org/download/)
+- recommended GUI for postgresql is pgAdmin4(https://www.pgadmin.org/download/)
 
-Past_Disciplinary_Action: 1 for Yes and 0 for No
+### Installing/Run locally
 
-Previous_IntraDepartmental_Movement: 1 for Yes and 0 for No
+- Make sure you have `python`, `postgres` and flask installed.
 
-No_of_previous_employers: 1 for Yes and 0 for No
+- Clone or fork repo
 
-Age_employed: numeric
+  ```bash
+    - git clone https://github.com/E-STAT/Deploying-Staff-Promtion-Algorithm-to-Web
+    - cd velay
+    - pipenv install
+  ```
+
+- Create a PostgreSQL database by running the command below in `psql`
+
+
+- Create/configure `.env` environment with your credentials. You can use the sample .env and .flaskenv files as reference points 
+
+- Run `flask run` to start the server and watch for changes.
+
+### Testing
+
+Test specs are implemented using [_pytest_]().
+
+- To test or consume the API locally, you can make use of [_Postman_](https://www.getpostman.com) to simulate a front-end client.
+
+> If you want to take the step below, first create a PostgreSQL database by running the command below in `psql`.
+
+- There is also a test script that you can fire up by running `pytest`. `pytest` performs a single full test suite run, including code coverage reporting.
+
+
+## HTTP Requests
+
+All API requests are made by sending a secure HTTPS request using one of the following methods, depending on the action being taken:
+
+- `POST` Create a resource
+- `GET` Get a resource or list of resources
+- `PUT` Update a resource
+- `DELETE` Delete a resource
+
+For `POST` and `PUT` requests, the body of your request may include a JSON payload.
+
+### HTTP Response Codes
+
+Each response will be returned with one of the following HTTP status codes:
+
+- `200` `OK` The request was successful
+- `400` `Bad Request` There was a problem with the request (security, malformed)
+- `401` `Unauthorized` The supplied API credentials are invalid
+- `403` `Forbidden` The credentials provided do not have permissions to access the requested resource
+- `404` `Not Found` An attempt was made to access a resource that does not exist in the API
+- `500` `Server Error` An error on the server occurred
